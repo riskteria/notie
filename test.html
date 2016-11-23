@@ -72,23 +72,14 @@
     <!-- JavaScript -->
     <script src="src/notie.js"></script>
     <script>
-      notie.setOptions({
-        colorSuccess: '#57BF57',
-        colorWarning: '#D6A14D',
-        colorError: '#E1715B',
-        colorInfo: '#4D82D6',
-        colorNeutral: '#A0A0A0',
-        colorText: '#FFFFFF',
-        animationDelay: 300,
-        backgroundClickDismiss: true
-      })
+      notie.setOptions()
 
       function success () {
         notie.alert(1, 'Success!')
       }
 
       function warning () {
-        notie.alert(2, 'Warning<br><b>with</b><br><i>HTML</i><br><u>included.</u>', 2)
+        notie.alert(2, 'Warning', 2)
       }
 
       function error () {

@@ -1,13 +1,13 @@
-$notie-color-success: #57BF57 !default;
-$notie-color-warning: #D6A14D !default;
-$notie-color-error: #E1715B !default;
-$notie-color-info: #4D82D6 !default;
+$notie-color-success: #4fd2b9 !default;
+$notie-color-warning: #ffbb33 !default;
+$notie-color-error: #ff4444 !default;
+$notie-color-info: #33b5e5 !default;
 $notie-color-neutral: #A0A0A0 !default;
 $notie-color-text: #FFFFFF !default;
 $notie-color-background: #FFFFFF !default;
 
-$notie-font-size-small: 18px !default;
-$notie-font-size-big: 24px !default;
+$notie-font-size-small: 14px !default;
+$notie-font-size-big: 18px !default;
 $notie-breakpoint: '(max-width: 600px)' !default;
 $notie-content-width: 900px !default;
 $notie-transition: all 0.3s ease !default;
@@ -15,7 +15,7 @@ $notie-transition: all 0.3s ease !default;
 $notie-date-arrow-up: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0IDI4bDEwLTEwIDEwIDEweiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMCAwaDQ4djQ4aC00OHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=' !default;
 $notie-date-arrow-down: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0IDIwbDEwIDEwIDEwLTEweiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMCAwaDQ4djQ4aC00OHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=' !default;
 
-$notie-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+$notie-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 @mixin notie-box-shadow($notie-box-shadow) {
 	-o-box-shadow: $notie-box-shadow;
 	-ms-box-shadow: $notie-box-shadow;
@@ -27,7 +27,7 @@ $notie-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 .notie-transition {
 	-moz-transition: $notie-transition;
 	-webkit-transition: $notie-transition;
-  transition: $notie-transition;
+  	transition: $notie-transition;
 }
 
 .notie-background-success {
@@ -47,21 +47,26 @@ $notie-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
+	margin: auto;
 	z-index: 999999999;
 	height: auto;
-	width: 100%;
+	min-width: 30%;
+	max-width: 100%;
 	display: none;
 	text-align: center;
 	cursor: pointer;
 	font-size: $notie-font-size-big;
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
 	@include notie-box-shadow($notie-box-shadow);
 	@media #{$notie-breakpoint} {
 		font-size: $notie-font-size-small;
 	}
 }
 #notie-alert-inner {
-	padding: 20px;
-  display: table-cell;
+	padding: 1rem;
+  	display: table-cell;
 }
 #notie-alert-content {
 	max-width: $notie-content-width;
@@ -77,10 +82,10 @@ $notie-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 #notie-confirm-inner {
 	box-sizing: border-box;
-  width: 100%;
-  padding: 20px;
-  display: block;
-  cursor: default;
+  	width: 100%;
+  	padding: 20px;
+  	display: block;
+  	cursor: default;
 	background-color: $notie-color-info;
 }
 #notie-confirm-text {
@@ -204,10 +209,10 @@ $notie-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .notie-select-choice {
 	@extend #notie-select-choices;
-  height: 50px;
-  line-height: 50px;
-  color: $notie-color-text;
-  cursor: pointer;
+  	height: 50px;
+  	line-height: 50px;
+  	color: $notie-color-text;
+  	cursor: pointer;
 }
 #notie-select-cancel {
 	height: 60px;
